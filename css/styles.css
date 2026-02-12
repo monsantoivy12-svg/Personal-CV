@@ -42,7 +42,7 @@
                 
     a {
         text-decoration: none;
-        color: #0077cc;
+        color: #cc0033;
         }
     a:hover {
         color: #005fa3;
@@ -57,7 +57,7 @@
         padding: 8px;
         }
     th {
-        background-color: #0077cc;
+        background-color: #cc0055;
         color: white;
         }
     form {
@@ -72,7 +72,7 @@
             }
             button {
             padding: 10px;
-            background-color: #0077cc;
+            background-color: #cc0055;
             color: white;
             border: none;
             cursor: pointer;

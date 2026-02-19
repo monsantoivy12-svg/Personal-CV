@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	
 	<link rel="stylesheet" href="css/styles.css">
+	
 	<meta charset="UTF-8">
 	<title>Personal Online CV</title>
 	<style>
@@ -44,8 +46,10 @@
 	
 </head>
 <body>
+	
 <header>
 	<section class="card">
+		<button id="themeToggle">Toggle Dark Mode</button> 
 		<h1> Monsanto, Ivy Q.</h1>
 		<p class="subtitle">IT Student | WEB SYSTEMS AND TECHNOLOGIES</p>
 
@@ -66,8 +70,9 @@
 			</p>
 			<p> Hello! My name is Ivy, you can call me 'Ivy'. I am 20 years old and I lived in Gango, Libona, Bukidnon. I am currently taking a Bachelor of Science in Information and Technology from University of Science and Technology of Southern Philippines(USTP). 
 			My hobbies include watching movies, kdrama and anime. Thats all!!</p>
-			
-			
+
+	<button id="toggleSkills">Show/Hide Skills</button>	
+	<section class="card" id="skillsSection">
 			<h1>SKILLS</h1>
 			<ul>
 				<li>HTML</li>
@@ -87,7 +92,8 @@
 					</ul>
 				
 			</ul>
-	</section>		
+	</section>	
+	<section class="card">	
 			<h2>EDUCATION</h2>
 			<table>
 			<tr>
@@ -119,13 +125,14 @@
 				<td>2028</td>
 			</tr>
 			</table>
+		</section>
 	<section class="card">
 			<h2> CONTACT ME</h2>
 			<form>
-			<input type="text" placeholder="Name"><br><br>
-			<input type="email" placeholder="Email"><br><br>
-			<textarea placeholder="Message"></textarea><br><br>
-			<button type="submit">SEND</button>
+			<input type="text" id="name" placeholder="Name">
+			<input type="email" id="email" placeholder="Email">
+			<textarea placeholder="Message"></textarea>
+			<button type="submit" id="submitBtn">Send</button>
 			</form>
 			
 		</section>
@@ -135,5 +142,7 @@
 	<footer class="footer">
 		<p>&copy; 2026 Monsanto Ivy. All rights reserved.</p>
 	</footer>
+<script src="js/script.js"></script>
 </body>
+
 </html>

@@ -10,10 +10,10 @@
     body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f8f9fb;
+    color: #333;
     padding: 20px;
-
-    }
+}
     .profile-2x2 {
 		width: 200px; 
 		height: 200px;
@@ -28,12 +28,18 @@
         margin: 0 auto;
     }
     .card {
-        background: #222;
-        padding: 20px;
-        margin-bottom: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(167, 17, 104, 0.1);
-        }
+    background: #ffe6f0;
+    border: 1px solid #e3e6ea;
+    border-left: 5px solid #cc0055; /* accent strip */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-3px);
+}
     h1 {
         text-align: center;
         margin-bottom: 10px;
@@ -52,7 +58,7 @@
                 
     a {
         text-decoration: none;
-        color: white;
+        color:  #cc0033;
         }
     a:hover {
         color: #005fa3;
@@ -67,7 +73,7 @@
         padding: 8px;
         }
     th {
-        background-color: #cc0033;
+        background-color:#cc0055;
         color: white;
         }
     form {
@@ -82,7 +88,7 @@
             }
             button {
             padding: 10px;
-            background-color: #222;
+            background-color: #cc0055;
             color: white;
             border: none;
             cursor: pointer;
@@ -94,7 +100,7 @@
         text-align: center;
         margin-top: 30px;
         }
-        .dark-mode {
+    .dark-mode {
             background-color: #222;
             color: white;
         
@@ -104,10 +110,26 @@
             background-color: #1e1e1e;
         }
 
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode p,
+        body.dark-mode li,
+        body.dark-mode td,
+        body.dark-mode th {
+        color: #ffffff;
+            }
+
     .dark-mode a {
             color: #4da6ff;
         }
-
+    body.dark-mode #themeToggle {
+    background-color: #cc0055;   
+    color: white;             
+    border: 1px solid #cccccc;
+}
+    body.dark-mode button:hover {
+    background-color: #cc0055;
+        }
        
     .hidden {
             display: none;

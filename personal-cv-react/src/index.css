@@ -214,4 +214,31 @@ button:focus-visible {
     
                     
             
-       
+       /* Contact Form Inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+  background-color: #ffffff;  /* white background */
+  color: #333333;             /* dark text */
+  border: 1px solid #e75480; /* pink border */
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+  color: #aaaaaa;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #c2185b;
+  background-color: #fff0f5; /* very light pink on focus */
+}

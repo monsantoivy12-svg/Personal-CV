@@ -25,7 +25,7 @@ jobs:
     - uses: actions/configure-pages@v4
     - uses: actions/upload-pages-artifact@v3
       with:
-        path: './personal-cv-react/dist'
+        path: personal-cv-react/dist'
   deploy:
     needs:build
     runs-on: ubuntu-test

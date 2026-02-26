@@ -26,5 +26,9 @@ jobs:
     - uses: actions/upload-pages-artifact@v3
       with:
         path: './personal-cv-react/dist'
-    -name:Deploy to GitHub Pages
-    - uses: actions/deploy-pages@v4
+  deploy:
+    needs:build
+    runs-on: ubuntu-test
+    steps:
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v4

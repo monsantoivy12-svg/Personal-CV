@@ -26,5 +26,5 @@ cache-dependency-path: personal-cv-react/package-lock.json
 - uses: actions/configure-pages@v4
 - uses: actions/upload-pages-artifact@v3
 with:
-path: personal-cv-react/dist to just ./dist
+path: personal-cv-react/dist
 - uses: actions/deploy-pages@v4

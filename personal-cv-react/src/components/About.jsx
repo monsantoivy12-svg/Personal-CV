@@ -1,7 +1,9 @@
 import profilePic from '../assets/images/profile.jpg';
+import Card from "./Card";
+
 function About() {
     return (
-        <section className="card">
+        <Card> 
             <h2>ABOUT ME</h2>
 
             <img 
@@ -34,7 +36,8 @@ function About() {
                 University of Science and Technology of Southern Philippines (USTP). 
                 My hobbies include watching movies, K-drama, and anime. That's all!
             </p>
-        </section>
+        </Card>
+        
     );
 }
 

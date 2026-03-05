@@ -9,6 +9,44 @@ import "./index.css";
 function App() {
     const [darkMode, setDarkMode] = useState(false);
 
+    const skills = [
+    { name: "HTML" },
+    { name: "CSS" },
+    { name: "JavaScript" },
+    { name: "React" },
+    { name: "Web Development", children: [
+        { name: "Frontend", children: [
+            { name: "HTML" },
+            { name: "CSS" },
+            { name: "JavaScript" }
+        ]},
+        { name: "Backend" }
+    ]}
+];
+
+    const education = [
+    {
+        year: "2010",
+        program: "Kindergarten",
+        institution: "Inobulan Central School"
+    },
+    {
+        year: "2016",
+        program: "Elementary (G4-G6)",
+        institution: "Bulua Central School"
+    },
+    {
+        year: "2023",
+        program: "TVL-ICT (G11-G12)",
+        institution: "Bulua National High School (G7-G10), Indahag National High School"
+    },
+    {
+        year: "2023 - Present",
+        program: "BS Information Technology",
+        institution: "University of Science and Technology of Southern Philippines"
+    }
+];
+
     // This runs whenever darkMode changes
     useEffect(() => {
         if (darkMode) {
@@ -31,8 +69,8 @@ function App() {
 
             <Header />
             <About />
-            <Skills />
-            <Education />
+            <Skills skills={skills} />
+            <Education education={education} />
             <Contact />
         </>
     );

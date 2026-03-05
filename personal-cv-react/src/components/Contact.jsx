@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 function Contact() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -15,10 +17,9 @@ function Contact() {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        alert("Message Sent!");
-        alert("Thank you for filling up!");
-    };
+    e.preventDefault();
+    alert(`Thank you ${formData.name}!`);  
+};
 
     return (
         <>

@@ -1,6 +1,19 @@
 import { useState } from "react";
 
-function Skills() {
+function SkillList({ skills }) {
+    return (
+        <ul>
+            {skills.map((skill, index) => (
+                <li key={index}>
+                    {skill.name}
+                    {skill.children && <SkillList skills={skill.children} />}
+                </li>
+            ))}
+        </ul>
+    );
+}
+
+function Skills({ skills }) {
     const [showSkills, setShowSkills] = useState(true);
 
     return (
@@ -11,26 +24,8 @@ function Skills() {
 
             {showSkills && (
                 <section className="card">
-                    <h2>SKILLS</h2>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>
-                            Web Development
-                            <ul>
-                                <li>
-                                    Frontend
-                                    <ul>
-                                        <li>HTML</li>
-                                        <li>CSS</li>
-                                        <li>JavaScript</li>
-                                    </ul>
-                                </li>
-                                <li>Backend</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <h2>Skills</h2>
+                    <SkillList skills={skills} />
                 </section>
             )}
         </div>

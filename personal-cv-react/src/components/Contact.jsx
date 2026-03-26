@@ -1,8 +1,6 @@
 import { useState } from "react";
 
 function Contact() {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -15,11 +13,19 @@ function Contact() {
             [e.target.name]: e.target.value
         });
     };
-
     const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Thank you ${formData.name}!`);  
-};
+        e.preventDefault();
+
+        fetch("http://localhost/cv-api/process.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData) 
+        })
+        .then(res => res.json())
+        .then(data => alert(data.message));
+    };
 
     return (
         <>
